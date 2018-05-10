@@ -1,0 +1,30 @@
+version: '3.1'
+services:
+
+  elixir:
+    build: ./app
+    ports:
+      - 4000:4000
+    volumes:
+      - ./app:/app
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=app_dev
+  
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
+volumes:
+    db_data:
