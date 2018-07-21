@@ -31,6 +31,9 @@ If you want to start the stack as daemon , add <strong> -d </strong>
 You can pass the `--no-brunch --no-html` to `mix phx.new . ` for API only
 
     docker exec -it YOUR_ELIXIR_CONTAINER mix phx.new .
+
+Now edit `app/config/dev.exs` => hostname: "postgres" in the database section and :
+
     docker exec -it YOUR_ELIXIR_CONTAINER mix phx.server
 
 # Clear & Remove Volume
