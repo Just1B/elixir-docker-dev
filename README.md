@@ -44,6 +44,11 @@ Now edit `app/config/dev.exs` => hostname: "postgres" in the database section an
 
 ![index](https://github.com/Just1B/Elixir_Docker_Dev/raw/master/screen/screen.png)
 
+# Ressources
+
+    - https://devhints.io/phoenix-ecto
+    - https://lobotuerto.com/blog/building-a-json-api-with-phoenix-and-elixir/
+
 # Licence
 
 The MIT License
